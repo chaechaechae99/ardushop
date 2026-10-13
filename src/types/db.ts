@@ -33,14 +33,14 @@ export type OrderStatus = "pending" | "paid" | "shipping" | "delivered" | "cance
 export type Order = {
   id: number;
   order_no: string;
-  user_id: string;
+  user_id: string | null;
   status: OrderStatus;
   subtotal: number;
   shipping_fee: number;
   total: number;
-  recipient: string;
-  phone: string;
-  address: string;
+  recipient: string | null;
+  phone: string | null;
+  address: string | null;
   memo: string | null;
   created_at: string;
 };

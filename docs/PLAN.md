@@ -85,3 +85,8 @@ MCP/
 - 장바구니는 Zustand + localStorage (DB `cart_items` 미사용)
 - 배포: https://ardushop.vercel.app (Vercel 프로젝트 ardushop, Next 15.5.27)
 - 남은 일: Auth 설정(이메일 인증·유출 비밀번호 보호), PG 연동
+
+## 7. 교육용 전환 (2026-10-13)
+- 회원가입·마이페이지 제거 (개인정보 수집 안 함)
+- 주문 → 비로그인 체험 주문 (`place_demo_order`), 배송정보 없음, 재고 차감 없음
+- 로그인은 관리자 전용 (푸터 링크)

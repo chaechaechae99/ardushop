@@ -54,7 +54,7 @@ export default async function AdminDashboard() {
               <li key={o.id} className="flex flex-wrap items-center gap-3 py-2.5">
                 <span className="w-40 text-gray-400">{formatDate(o.created_at)}</span>
                 <span className="flex-1">
-                  {o.order_no} · {o.recipient}
+                  {o.order_no} · {o.recipient ?? "체험 주문"}
                 </span>
                 <StatusBadge status={o.status} />
                 <span className="w-24 text-right font-semibold">{won(o.total)}</span>

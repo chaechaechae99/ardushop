@@ -40,10 +40,16 @@ export default async function AdminOrdersPage() {
                 ))}
               </td>
               <td className="px-3 py-2.5">
-                <p>
-                  {o.recipient} · {o.phone}
-                </p>
-                <p className="text-gray-500">{o.address}</p>
+                {o.recipient ? (
+                  <>
+                    <p>
+                      {o.recipient} · {o.phone}
+                    </p>
+                    <p className="text-gray-500">{o.address}</p>
+                  </>
+                ) : (
+                  <span className="text-gray-400">체험 주문 (배송정보 없음)</span>
+                )}
               </td>
               <td className="px-3 py-2.5 text-right font-semibold">{won(o.total)}</td>
               <td className="px-3 py-2.5">

@@ -81,7 +81,7 @@ export default function CartView() {
           <span>{won(subtotal + shipping)}</span>
         </div>
         <Link href="/checkout" className="btn-primary w-full py-3.5">
-          주문하기
+          체험 주문하기
         </Link>
       </aside>
     </div>

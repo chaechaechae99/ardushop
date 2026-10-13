@@ -19,28 +19,16 @@ export default async function Header() {
           <SearchBox />
         </div>
         <nav className="ml-auto flex items-center gap-1 text-sm">
-          {session ? (
+          {session && (
             <>
               {isAdmin && (
                 <Link href="/admin" className="rounded-md px-2.5 py-2 font-semibold text-accent-500 hover:bg-gray-100">
                   관리자
                 </Link>
               )}
-              <Link href="/mypage" className="rounded-md px-2.5 py-2 text-gray-700 hover:bg-gray-100">
-                마이페이지
-              </Link>
               <form action={signOut}>
                 <button className="rounded-md px-2.5 py-2 text-gray-500 hover:bg-gray-100">로그아웃</button>
               </form>
-            </>
-          ) : (
-            <>
-              <Link href="/login" className="rounded-md px-2.5 py-2 text-gray-700 hover:bg-gray-100">
-                로그인
-              </Link>
-              <Link href="/signup" className="rounded-md px-2.5 py-2 text-gray-700 hover:bg-gray-100">
-                회원가입
-              </Link>
             </>
           )}
           <CartLink />

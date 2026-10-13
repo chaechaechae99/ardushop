@@ -1,4 +1,6 @@
-# 아두몰 — 아두이노 부품 쇼핑몰
+# 아두몰 — 아두이노 부품 쇼핑몰 (교육용 데모)
+
+배포: https://ardushop.vercel.app — 실제 판매·결제·배송 없음, 회원가입 없음.
 
 Next.js 15 (App Router) + Supabase(Postgres·Auth·RLS) + Tailwind CSS v4 + Zustand.
 
@@ -14,18 +16,13 @@ npm run dev                  # http://localhost:3000
 - `supabase/seed/products.json` — 상품 원본 데이터 (디바이스마트 판매가 기준)
 - `node scripts/build-seed.mjs` → `supabase/seed/seed.sql` 재생성
 
-### 관리자 지정
-가입 후 SQL 에디터에서:
-```sql
-update public.profiles set role = 'admin'
-where id = (select id from auth.users where email = '내이메일@example.com');
-```
+### 관리자
+회원가입은 없습니다. 관리자 계정은 Supabase에서 직접 만들고 `profiles.role = 'admin'`으로 지정합니다. 로그인은 푸터의 "관리자" 링크(`/login`).
 
 ## 기능
 - 상품 목록/카테고리/검색/정렬, 상세(사양표)
 - 장바구니(로컬 저장), 3만원 이상 무료배송
-- 회원가입/로그인, 마이페이지(주문내역·취소, 회원정보)
-- 주문: DB 함수에서 가격·재고 검증 후 원자적으로 재고 차감 (테스트 결제)
+- 체험 주문: 로그인·개인정보 없이 주문 기록만 남김 (`place_demo_order`, 가격·재고 검증만 하고 재고는 차감 안 함)
 - 관리자: 대시보드, 상품 등록/가격·재고·노출 수정, 재고 부족 목록, 주문 상태 변경
 
 ## 이미지
