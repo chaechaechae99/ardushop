@@ -2,6 +2,8 @@
 
 배포: https://ardushop.vercel.app — 실제 판매·결제·배송 없음, 회원가입 없음.
 
+📚 **강의노트: [docs/lecture](docs/lecture/README.md)** — 기획부터 배포까지 10장
+
 Next.js 15 (App Router) + Supabase(Postgres·Auth·RLS) + Tailwind CSS v4 + Zustand.
 
 ## 실행
